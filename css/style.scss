@@ -186,9 +186,9 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: end;
-  height: 765px;
-  background-image: url('../img/bg-hero1.jpg');
-  background-position: center;
+  height: 100vh;
+  background-image: url('../img/bg-hero2.jpg');
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -298,6 +298,43 @@ img {
 
     span {
       color: var(--colorAccent);
+    }
+  }
+
+  &__color-group {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 25px;
+
+    img {
+      width: 120px;
+      height: 120px;
+      border: 5px solid var(--colorGray);
+      border-radius: 50%;
+    }
+  }
+}
+
+/* gallery */
+.gallery {
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  &__item {
+    height: 300px;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .2s ease;
+
+    &:hover {
+      transform: scale(1.02);
     }
   }
 }
