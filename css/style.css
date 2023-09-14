@@ -107,7 +107,7 @@ img {
 }
 
 .title {
-  margin-bottom: 45px;
+  margin-bottom: 35px;
   color: var(--colorAccent);
   font-size: 36px;
   font-weight: 700;
@@ -230,7 +230,7 @@ img {
   margin-bottom: 40px;
   color: var(--colorText);
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 }
 .about__images {
   display: flex;
@@ -282,14 +282,106 @@ img {
 }
 .gallery__item {
   height: 300px;
+  overflow: hidden;
 }
 .gallery__img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.2s ease;
+  transition: transform 0.3s ease;
 }
 .gallery__img:hover {
-  transform: scale(1.02);
+  transform: scale(1.1);
+}
+
+/* registration */
+.registration {
+  padding-bottom: 40px;
+  border-bottom: none;
+  text-align: center;
+  font-size: 18px;
+}
+.registration__text {
+  margin-bottom: 40px;
+  color: var(--colorText);
+}
+.registration__date {
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: var(--colorBlack);
+}
+.registration__place {
+  margin-bottom: 40px;
+}
+
+/* wedding */
+.wedding {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+.wedding__date {
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--colorBlack);
+  font-size: 18px;
+  font-weight: 500;
+}
+.wedding__list {
+  margin-bottom: 60px;
+}
+.wedding__item {
+  display: flex;
+  align-items: start;
+  margin-bottom: 30px;
+}
+.wedding__time {
+  position: relative;
+  margin-right: 100px;
+  color: var(--colorAccent);
+  font-size: 24px;
+}
+.wedding__time::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -150px;
+  bottom: 0;
+  left: 0;
+  background-image: url("../img/heart-dark-green.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.wedding__time::before {
+  content: "";
+  position: absolute;
+  top: 35px;
+  right: 0;
+  bottom: 0;
+  left: 104px;
+  width: 1px;
+  height: 50px;
+  background-color: var(--colorAccent);
+}
+.wedding__title {
+  margin-bottom: 20px;
+  color: var(--colorAccent);
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* form */
+.form__text {
+  margin-bottom: 50px;
+  text-align: center;
+  color: var(--colorText);
+  font-size: 18px;
+}
+.form__input-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form__input {
+  padding: 15px 25px;
 }/*# sourceMappingURL=style.css.map */

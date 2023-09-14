@@ -1,3 +1,4 @@
+// Таймер до свадьбы
 function timer() {
     let dateWedding = new Date('Sep 30 2023 16:00:00');
     let dateNow = new Date();
@@ -14,3 +15,36 @@ function timer() {
 }
 
 setInterval(timer, 1000);
+
+
+// Карта
+ymaps.ready(init);
+function init() {
+    var registrationMap = new ymaps.Map("registration-map", {
+        center: [51.663146, 39.203025],
+        zoom: 17,
+    });
+
+    var weddingMap = new ymaps.Map("wedding-map", {
+        center: [51.669266, 39.222035],
+        zoom: 17,
+    });
+
+    var registrationGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point",
+            coordinates: [51.663146, 39.203025],
+        }
+    });
+
+    var weddingGeoObject = new ymaps.GeoObject({
+        geometry: {
+            type: "Point",
+            coordinates: [51.669266, 39.222035],
+        }
+    });
+
+    registrationMap.geoObjects.add(registrationGeoObject);
+    weddingMap.geoObjects.add(weddingGeoObject);
+}
+

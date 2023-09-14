@@ -7,6 +7,7 @@
   <title>Wedding</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -29,10 +30,10 @@
 
   <main>
     <section class="hero">
-      <div class="hero__title">
+      <h1 class="hero__title">
         <span>Полина</span>
         <span>Сергей</span>
-      </div>
+      </h1>
       <div class="hero__timer timer">
         <div class="timer__watch watch">
           <div class="watch__display display">
@@ -179,6 +180,71 @@
 
         </ul>
 
+      </div>
+    </section>
+
+    <section class="section registration">
+      <div class="section-container">
+        <h2 class="title">Регистрация</h2>
+        <p class="registration__text">
+          В&nbsp;этот день мы&nbsp;официально зарегистрируем наш брак. Это будет неторжественное мероприятие, после которого
+          мы&nbsp;хотим провести день вдвоем. Если Вы&nbsp;хотите присутствовать, с&nbsp;радостью ждем Вас
+          по&nbsp;адресу&nbsp;г. Воронеж, пл. Ленина, 11.
+        </p>
+        <p class="registration__date">27 сентября 2023 года 12:45</p>
+        <p class="registration__place">ЗАГС Центральный. г. Воронеж, пл. Ленина, 11</p>
+      </div>
+      <div id="registration-map" style="width: 100%; height: 400px"></div>
+    </section>
+
+    <section class="section wedding">
+      <div class="section-container">
+        <h2 class="title">День свадьбы</h2>
+        <p class="wedding__date">30 сентября 2023 года</p>
+
+        <ul class="wedding__list list-reset">
+          <li class="wedding__item">
+            <span class="wedding__time">15:30</span>
+            <div class="wedding__event">
+              <h3 class="wedding__title">Сбор гостей</h3>
+              <p class="wedding__text">Ждем Вас по&nbsp;адресу&nbsp;г. Воронеж, ул. Пролетарская, 87В</p>
+            </div>
+          </li>
+  
+          <li class="wedding__item">
+            <span class="wedding__time">16:00</span>
+            <div class="wedding__event">
+              <h3 class="wedding__title">Начало церемонии</h3>
+              <p class="wedding__text">Выездная регистрация начнется в&nbsp;16:00&nbsp;на первом этаже в&nbsp;Сабуров Холл&nbsp;&mdash; зал &laquo;Биркин&raquo;</p>
+            </div>
+          </li>
+  
+          <li class="wedding__item">
+            <span class="wedding__time">17:00</span>
+            <div class="wedding__event">
+              <h3 class="wedding__title">Свадебный ужин</h3>
+              <p class="wedding__text">После церемонии остаемся там&nbsp;же, занимаем свои места и&nbsp;наслаждаемся вечером!</p>
+            </div>
+          </li>
+        </ul>
+        
+      </div>
+      <div id="wedding-map" style="width: 100%; height: 400px"></div>
+    </section>
+
+    <section class="section form">
+      <div class="section-container">
+        <h2 class="title">Мы вас ждем!</h2>
+        <p class="form__text">Пожалуйста, заполните форму ниже, если&nbsp;Вы будете присутствовать на&nbsp;нашей свадьбе</p>
+        <form class="form__area" action="mail.php" method="POST">
+          <div class="form__input-group">
+            <input class="form__input" type="text" placeholder="Имя">
+            <input class="form__input" type="text" placeholder="Фамилия">
+            <input class="form__input" type="number" placeholder="Номер телефона">
+            <input class="form__input" type="number" placeholder="Количество гостей">
+          </div>
+          <button class="form__btn" type="submit">Я приду!</button>
+        </form>
       </div>
     </section>
   </main>
