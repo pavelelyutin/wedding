@@ -7,6 +7,7 @@
   <title>Wedding</title>
   <link rel="stylesheet" href="./css/normalize.css">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/media.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
   <script defer src="./js/script.js"></script>
 </head>
@@ -16,24 +17,23 @@
     <div class="container header__container">
       <nav class="nav header__nav">
         <ul class="nav__list list-reset">
-          <li class="nav__item"><a class="nav__link" href="#">Приглашение</a></li>
+          <li class="nav__item"><a class="nav__link" href="#hero">Приглашение</a></li>
           <li class="nav__item"><a class="nav__link" href="#about">О нас</a></li>
           <li class="nav__item"><a class="nav__link" href="#questions">F.A.Q.</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Опрос</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Программа</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Церемония</a></li>
-          <li class="nav__item"><a class="nav__link" href="#">Свадебный ужин</a></li>
+          <li class="nav__item"><a class="nav__link" href="#gallery">Наши моменты</a></li>
+          <li class="nav__item"><a class="nav__link" href="#registration">Регистрация</a></li>
+          <li class="nav__item"><a class="nav__link" href="#wedding">День свадьбы</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
   <main>
-    <section class="hero">
-      <h1 class="hero__title">
+    <section id="hero" class="hero">
+      <!-- <h1 class="hero__title">
         <span>Полина</span>
         <span>Сергей</span>
-      </h1>
+      </h1> -->
       <div class="hero__timer timer">
         <div class="timer__watch watch">
           <div class="watch__display display">
@@ -126,7 +126,7 @@
       </div>
     </section>
 
-    <section class="section gallery">
+    <section id="gallery" class="section gallery">
       <div class="container">
 
         <h2 class="title">Наши моменты</h2>
@@ -183,7 +183,7 @@
       </div>
     </section>
 
-    <section class="section registration">
+    <section id="registration" class="section registration">
       <div class="section-container">
         <h2 class="title">Регистрация</h2>
         <p class="registration__text">
@@ -197,7 +197,7 @@
       <div id="registration-map" style="width: 100%; height: 400px"></div>
     </section>
 
-    <section class="section wedding">
+    <section id="wedding" class="section wedding">
       <div class="section-container">
         <h2 class="title">День свадьбы</h2>
         <p class="wedding__date">30 сентября 2023 года</p>
@@ -240,16 +240,26 @@
           <div class="form__input-group">
             <input class="form__input" type="text" placeholder="Имя">
             <input class="form__input" type="text" placeholder="Фамилия">
-            <input class="form__input" type="number" placeholder="Номер телефона">
-            <input class="form__input" type="number" placeholder="Количество гостей">
+            <input class="form__input" type="text" placeholder="Номер телефона">
+            <input class="form__input" type="text" placeholder="Количество гостей">
           </div>
-          <button class="form__btn" type="submit">Я приду!</button>
+          <div class='form__btn-wrapper'>
+            <button class="form__btn" type="submit">Я приду!</button>
+          </div>
+
         </form>
       </div>
     </section>
   </main>
 
-  <footer></footer>
+  <footer class="footer">
+    <div class="footer__container container">
+      <span class="footer__title">Полина и Сергей</span>
+      <span class="footer__text">Свяжитесь с нами по всем вопросам:</span>
+      <span class="footer__text"><a href="tel:79525594226">Полина: +7(952) 559-42-26</a></span>
+      <span class="footer__text"><a href="tel:79525402041">Сергей: +7(952) 540-20-41</a></span>
+    </div>
+  </footer>
 
   <script src="./js/fslightbox.js"></script>
 </body>

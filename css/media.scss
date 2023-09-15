@@ -1,0 +1,226 @@
+@media (max-width: 991.98px) {
+
+  /* glob */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .section-container {
+    max-width: 600px;
+  }
+
+  .title {
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+
+  /* header */
+  .nav {
+    &__list {
+      gap: 25px;
+    }
+  }
+
+  /* timer */
+  .timer {
+    height: 160px;
+  }
+
+  .watch {
+    width: 600px;
+    height: 180px;
+  }
+
+  .display {
+    width: 120px;
+    height: 120px;
+
+    &__number {
+      font-size: 48px;
+    }
+  }
+
+  /* about */
+  .about {
+    &__text {
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    &__images {
+      background-size: 60px 60px;
+    }
+
+    &__image {
+      width: 140px;
+      height: 140px;
+    }
+  }
+
+  /* gallery */
+  .gallery {
+    &__list {
+      gap: 20px;
+    }
+
+    &__item {
+      height: 240px;
+    }
+  }
+
+  /* registration */
+  .registration {
+    padding-bottom: 0;
+    &__text {
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+
+  /* wedding */
+  .wedding {
+    padding-bottom: 0;
+  }
+}
+
+@media(max-width: 767.98px) {
+  .header {
+    &__nav {
+      display: none;
+    }
+  }
+
+  .timer {
+    height: 140px;
+  }
+
+  .watch {
+    height: 160px;
+  }
+
+  .display {
+    width: 100px;
+    height: 100px;
+
+    &__number {
+      font-size: 42px;
+    }
+  }
+
+  .gallery {
+    &__list {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    &__item {
+      height: 180px;
+    }
+  }
+}
+
+@media(max-width: 567.98px) {
+  /* glob */
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+
+  /* hero */
+  .timer {
+    height: 100px;
+  }
+
+  .watch {
+    height: 120px;
+  }
+
+  .display {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+
+    &__number {
+      font-size: 24px;
+    }
+
+    &__text {
+      font-size: 12px;
+    }
+  }
+
+  /* about */
+  .about {
+    &__text {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+
+    &__images {
+      background-size: 30px 30px;
+    }
+
+    &__image {
+      width: 90px;
+      height: 90px;
+    }
+  }
+
+  /* questions */
+  .questions {
+    &__wrapper:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &__title {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    &__answer {
+      font-size: 14px;
+    }
+
+    &__color-group {
+      padding-top: 10px;
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+  }
+
+  /* gallery */
+  .gallery {
+    &__list {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    &__item {
+      height: 180px;
+    }
+  }
+
+  /* registration */
+  .registration {
+    &__text {
+      font-size: 14px;
+    }
+  }
+
+  /* form */
+  .form {
+    &__input-group {
+      grid-template-columns: 1fr;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+  }
+
+}

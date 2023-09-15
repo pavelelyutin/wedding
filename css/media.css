@@ -1,0 +1,165 @@
+@media (max-width: 991.98px) {
+  /* glob */
+  .section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .section-container {
+    max-width: 600px;
+  }
+  .title {
+    margin-bottom: 25px;
+    font-size: 32px;
+  }
+  /* header */
+  .nav__list {
+    gap: 25px;
+  }
+  /* timer */
+  .timer {
+    height: 160px;
+  }
+  .watch {
+    width: 600px;
+    height: 180px;
+  }
+  .display {
+    width: 120px;
+    height: 120px;
+  }
+  .display__number {
+    font-size: 48px;
+  }
+  /* about */
+  .about__text {
+    margin-bottom: 25px;
+    font-size: 16px;
+  }
+  .about__images {
+    background-size: 60px 60px;
+  }
+  .about__image {
+    width: 140px;
+    height: 140px;
+  }
+  /* gallery */
+  .gallery__list {
+    gap: 20px;
+  }
+  .gallery__item {
+    height: 240px;
+  }
+  /* registration */
+  .registration {
+    padding-bottom: 0;
+  }
+  .registration__text {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  /* wedding */
+  .wedding {
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .header__nav {
+    display: none;
+  }
+  .timer {
+    height: 140px;
+  }
+  .watch {
+    height: 160px;
+  }
+  .display {
+    width: 100px;
+    height: 100px;
+  }
+  .display__number {
+    font-size: 42px;
+  }
+  .gallery__list {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .gallery__item {
+    height: 180px;
+  }
+}
+@media (max-width: 567.98px) {
+  /* glob */
+  .section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .title {
+    font-size: 24px;
+  }
+  /* hero */
+  .timer {
+    height: 100px;
+  }
+  .watch {
+    height: 120px;
+  }
+  .display {
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+  }
+  .display__number {
+    font-size: 24px;
+  }
+  .display__text {
+    font-size: 12px;
+  }
+  /* about */
+  .about__text {
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  .about__images {
+    background-size: 30px 30px;
+  }
+  .about__image {
+    width: 90px;
+    height: 90px;
+  }
+  /* questions */
+  .questions__wrapper:not(:last-child) {
+    margin-bottom: 20px;
+  }
+  .questions__title {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .questions__answer {
+    font-size: 14px;
+  }
+  .questions__color-group {
+    padding-top: 10px;
+  }
+  .questions__color-group img {
+    width: 60px;
+    height: 60px;
+  }
+  /* gallery */
+  .gallery__list {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .gallery__item {
+    height: 180px;
+  }
+  /* registration */
+  .registration__text {
+    font-size: 14px;
+  }
+  /* form */
+  .form__input-group {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+}/*# sourceMappingURL=media.css.map */
