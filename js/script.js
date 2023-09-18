@@ -16,6 +16,29 @@ function timer() {
 
 setInterval(timer, 1000);
 
+// Появлению фиксированного меню при скролле
+window.scroll(function() {    
+    // var scroll = window.scrollY;
+    console.log('afsdfasf');
+
+    // if (scroll >= 100) {
+    //     document.querySelector('.header').classList.add('scrolled');
+    // } else {
+    //     document.querySelector('.header').classList.remove('scrolled');
+    // }
+});
+
+window.addEventListener('scroll', function() {
+    var scroll = window.scrollY;
+    console.log(scroll);
+
+    if (scroll >= 400) {
+        document.querySelector('.header').classList.add('scrolled');
+    } else {
+        document.querySelector('.header').classList.remove('scrolled');
+    }
+})
+
 
 // Карта
 ymaps.ready(init);
