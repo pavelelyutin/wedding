@@ -86,9 +86,38 @@
 
 @media(max-width: 767.98px) {
   .header {
-    &__nav {
-      display: none;
+    position: fixed;
+    height: 70px;
+    border: 1px solid var(--colorGray);
+    border-radius: 0 0 30px 30px;
+    color: var(--colorBlack);
+    background-color: var(--colorWhite);
+    transition: height .3s ease;
+  }
+
+  .header-active {
+    height: 350px;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .burger {
+    display: block;
+  }
+  
+  .nav {
+    opacity: 0;
+    transition: opacity .3s ease;
+
+    &__list {
+      flex-direction: column;
     }
+  }
+
+  .nav-active {
+    opacity: 1;
   }
 
   .timer {

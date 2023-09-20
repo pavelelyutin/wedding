@@ -17,28 +17,30 @@ function timer() {
 setInterval(timer, 1000);
 
 // Появлению фиксированного меню при скролле
-window.scroll(function() {    
-    // var scroll = window.scrollY;
-    console.log('afsdfasf');
-
-    // if (scroll >= 100) {
-    //     document.querySelector('.header').classList.add('scrolled');
-    // } else {
-    //     document.querySelector('.header').classList.remove('scrolled');
-    // }
-});
-
 window.addEventListener('scroll', function() {
     var scroll = window.scrollY;
     console.log(scroll);
-
-    if (scroll >= 400) {
-        document.querySelector('.header').classList.add('scrolled');
-    } else {
-        document.querySelector('.header').classList.remove('scrolled');
+    console.log(window.innerWidth)
+    if (this.window.innerWidth > 767.98) {
+        if (scroll >= 400) {
+            document.querySelector('.header').classList.add('scrolled');
+        } else {
+            document.querySelector('.header').classList.remove('scrolled');
+        }
     }
 })
 
+// Открытие и закрытие бургер меню
+let burger = document.getElementById('burger');
+let header = document.querySelector('.header');
+let headerNav = document.querySelector('.header__nav');
+
+burger.addEventListener('click', function() {
+    burger.classList.toggle('burger-active');
+    header.classList.toggle('header-active');
+    headerNav.classList.toggle('nav-active');
+    document.body.classList.toggle('stop-scroll');
+})
 
 // Карта
 ymaps.ready(init);
