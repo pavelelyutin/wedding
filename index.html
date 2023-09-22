@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="./css/media.css">
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+  <script src="./js/jquery.js"></script>
   <script defer src="./js/script.js"></script>
 </head>
 
@@ -241,12 +242,12 @@
       <div class="section-container">
         <h2 class="title">Мы вас ждем!</h2>
         <p class="form__text">Пожалуйста, заполните форму ниже, если&nbsp;Вы будете присутствовать на&nbsp;нашей свадьбе</p>
-        <form class="form__area" action="mail.php" method="POST">
+        <form onsubmit="submitForm(event)" enctype="multipart/form-data" id="form" class="form__area" action="mail.php" method="POST">
           <div class="form__input-group">
-            <input class="form__input" type="text" placeholder="Имя">
-            <input class="form__input" type="text" placeholder="Фамилия">
-            <input class="form__input" type="text" placeholder="Номер телефона">
-            <input class="form__input" type="text" placeholder="Количество гостей">
+            <input class="form__input" type="text" name="user_name" placeholder="Имя">
+            <input class="form__input" type="text" name="user_lastname" placeholder="Фамилия">
+            <input class="form__input" type="text" name="user_phone" placeholder="Номер телефона">
+            <input class="form__input" type="text" name="user_guest" placeholder="Количество гостей">
           </div>
           <div class='form__btn-wrapper'>
             <button class="form__btn" type="submit">Я приду!</button>

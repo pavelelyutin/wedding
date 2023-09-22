@@ -19,8 +19,6 @@ setInterval(timer, 1000);
 // Появлению фиксированного меню при скролле
 window.addEventListener('scroll', function() {
     var scroll = window.scrollY;
-    console.log(scroll);
-    console.log(window.innerWidth)
     if (this.window.innerWidth > 767.98) {
         if (scroll >= 400) {
             document.querySelector('.header').classList.add('scrolled');
@@ -40,6 +38,15 @@ burger.addEventListener('click', function() {
     header.classList.toggle('header-active');
     headerNav.classList.toggle('nav-active');
     document.body.classList.toggle('stop-scroll');
+})
+
+// Скрытие меню при нажатии на пункт меню
+headerNav.addEventListener('click', function(event) {
+    if (event.target) {
+        header.classList.remove('header-active')
+        headerNav.classList.remove('nav-active');
+        document.body.classList.remove('stop-scroll');
+    }
 })
 
 // Карта
@@ -73,3 +80,33 @@ function init() {
     weddingMap.geoObjects.add(weddingGeoObject);
 }
 
+
+async function submitForm(event) {
+    event.preventDefault(); // отключаем перезагрузку/перенаправление страницы
+    try {
+        // Формируем запрос
+      const response = await fetch(event.target.action, {
+          method: 'POST',
+          body: new FormData(event.target)
+      });
+      // проверяем, что ответ есть
+      if (!response.ok) throw (`Ошибка при обращении к серверу: ${response.status}`);
+      // проверяем, что ответ действительно JSON
+      const contentType = response.headers.get('content-type');
+      if (!contentType || !contentType.includes('application/json')) {
+        throw ('Ошибка обработки. Ответ не JSON');
+      }
+      // обрабатываем запрос
+      const json = await response.json();
+      if (json.result === "success") {
+          // в случае успеха
+          alert(json.info);
+      } else { 
+          // в случае ошибки
+          console.log(json);
+          throw (json.info);
+      }
+    } catch (error) { // обработка ошибки
+      alert(error);
+    }
+  }
