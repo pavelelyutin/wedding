@@ -283,7 +283,7 @@ img {
   flex-direction: column;
   justify-content: end;
   height: 100vh;
-  background-image: url('../img/bg-hero3.jpg');
+  background-image: url('../img/bg-hero.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -522,6 +522,63 @@ img {
     color: var(--colorAccent);
     font-size: 24px;
     font-weight: 400;
+  }
+}
+
+/* place */
+.place {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
+  }
+  
+  &__img {
+    text-align: center;
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+
+.table {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  border: 1px solid rgb(233, 233, 233);
+  border-radius: 20px;
+  padding: 65px 0 35px 0;
+  transition: .3s ease;
+
+  &__title {
+    position: absolute;
+    z-index: 89;
+    top: -30px;
+    font-family: 'Caveat', sans-serif;
+    font-weight: 400;
+    font-size: 56px;
+    transform: rotate(-15deg);
+  }
+
+  &:hover {
+    color: var(--colorAccent);
+    transform: scale(1.03);
+  }
+}
+
+.person {
+  text-align: center;
+
+  &__name:not(:last-child) {
+    margin-bottom: 7px;
   }
 }
 

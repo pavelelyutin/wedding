@@ -43,7 +43,8 @@ burger.addEventListener('click', function() {
 // Скрытие меню при нажатии на пункт меню
 headerNav.addEventListener('click', function(event) {
     if (event.target) {
-        header.classList.remove('header-active')
+        header.classList.remove('header-active');
+        burger.classList.remove('burger-active');
         headerNav.classList.remove('nav-active');
         document.body.classList.remove('stop-scroll');
     }
@@ -78,6 +79,8 @@ function init() {
 
     registrationMap.geoObjects.add(registrationGeoObject);
     weddingMap.geoObjects.add(weddingGeoObject);
+    registrationMap.behaviors.disable('scrollZoom');
+    weddingMap.behaviors.disable('scrollZoom');
 }
 
 
